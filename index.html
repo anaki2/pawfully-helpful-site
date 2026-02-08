@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfully Helpful - Your Pet's Best Friend! ✨</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #fdf2f8, #faf5ff, #eff6ff);
+            border-bottom: 4px solid #fbcfe8;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+        }
+
+        .logo-emoji {
+            font-size: 2rem;
+            animation: bounce 1s infinite;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #ec4899, #a855f7, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-tagline {
+            font-size: 0.75rem;
+            color: #f9a8d4;
+            font-style: italic;
+        }
+
+        nav {
+            display: none;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            border: 2px dashed #d1d5db;
+        }
+
+        nav a {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            color: #ec4899;
+            transform: scale(1.1);
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fce7f3, #f3e8ff, #dbeafe);
+            border-bottom: 4px dashed #d1d5db;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 2px dashed #fbcfe8;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #db2777;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ec4899, #a855f7, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: #374151;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #f9a8d4;
+            padding-left: 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #f472b6, #ec4899, #db2777);
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #db2777;
+            border: 2px solid #f9a8d4;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: #fdf2f8;
+            transform: scale(1.05);
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            border: 2px dashed #fbcfe8;
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ec4899;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 8px solid white;
+            transition: transform 0.3s;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        /* Floating Bubbles */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            border: 2px dashed;
+        }
+
+        .bubble-1 {
+            top: 40px;
+            left: 40px;
+            width: 80px;
+            height: 80px;
+            background: #f9a8d4;
+            border-color: #f472b6;
+            animation: pulse 2s infinite;
+        }
+
+        .bubble-2 {
+            top: 80px;
+            right: 80px;
+            width: 128px;
+            height: 128px;
+            background: #d8b4fe;
+            border-color: #c084fc;
+            animation: bounce 2s infinite;
+        }
+
+        .bubble-3 {
+            bottom: 80px;
+            left: 25%;
+            width: 96px;
+            height: 96px;
+            background: #93c5fd;
+            border-color: #60a5fa;
+            animation: pulse 2s infinite 1s;
+        }
+
+        /* Pet Categories Section */
+        .pet-categories {
+            padding: 4rem 1rem;
+            background: linear-gradient(to bottom, white, #fdf2f8);
+            border-bottom: 4px dashed #d1d5db;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .categories-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .category-card {
+            background: white;
+            border: 4px dashed #fbcfe8;
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            border-style: solid;
+            border-color: #f472b6;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .category-image-wrapper {
+            position: relative;
+            height: 192px;
+            overflow: hidden;
+            border-bottom: 2px dashed #d1d5db;
+        }
+
+        .category-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+            opacity: 0.9;
+        }
+
+        .category-card:hover .category-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .category-emoji {
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 50%;
+            padding: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 4px solid #fbcfe8;
+            font-size: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover .category-emoji {
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .category-content {
+            padding: 1.5rem;
+            padding-top: 2.5rem;
+            text-align: center;
+        }
+
+        .category-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #ec4899, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-description {
+            font-size: 0.875rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+            border-left: 2px dashed #d1d5db;
+            padding-left: 0.5rem;
+        }
+
+        .category-button {
+            width: 100%;
+            background: linear-gradient(to right, #f472b6, #c084fc);
+            color: white;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #ec4899, #a855f7);
+        }
+
+        /* Tips Section */
+        .tips-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(to bottom, #fdf2f8, #faf5ff);
+            border-bottom: 4px dashed #d1d5db;
+        }
+
+        .tips-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        .tip-card {
+            background: white;
+            border: 4px dashed #fbcfe8;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-8px) rotate(1deg);
+            border-style: solid;
+            border-color: #f472b6;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .tip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .tip-badge {
+            padding: 0.25rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 2px solid;
+        }
+
+        .heart-button {
+            background: none;
+            border: 2px dashed #d1d5db;
+            border-radius: 50%;
+            padding: 0.25rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.5rem;
+        }
+
+        .heart-button:hover {
+            transform: scale(1.25);
+        }
+
+        .heart-button.liked {
+            border-color: #fbcfe8;
+            transform: scale(1.1);
+        }
+
+        .tip-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px dashed #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        .tip-card:hover .tip-title {
+            color: #db2777;
+        }
+
+        .tip-excerpt {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            background: #f9fafb;
+            padding: 0.75rem;
+            border-radius: 0.25rem;
+            border-left: 4px solid #fbcfe8;
+            font-size: 0.875rem;
+        }
+
+        .tip-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px dashed #e5e7eb;
+            padding-top: 0.75rem;
+        }
+
+        .read-time {
+            background: #f3f4f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .read-more {
+            color: #ec4899;
+            font-weight: 500;
+            font-size: 0.875rem;
+            border: 1px dashed #fbcfe8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            transition: all 0.3s;
+            background: none;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            background: #fdf2f8;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 4rem 1rem;
+            background: linear-gradient(to right, #f472b6, #c084fc, #60a5fa);
+            border-bottom: 4px dashed #9ca3af;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-content {
+            max-width: 768px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            border: 4px dashed rgba(255, 255, 255, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .form-group {
+                flex-direction: row;
+            }
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            border: 2px dashed #fbcfe8;
+            font-size: 1rem;
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-style: solid;
+            border-color: #f472b6;
+        }
+
+        .newsletter-button {
+            background: linear-gradient(to right, #ec4899, #a855f7);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            border: 2px solid white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #db2777, #9333ea);
+        }
+
+        .newsletter-disclaimer {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.875rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            border-style: solid;
+        }
+
+        .benefit-emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-text {
+            color: white;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #111827, #581c87, #831843);
+            color: #e5e7eb;
+            padding: 3rem 1rem;
+            border-top: 4px dashed #4b5563;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #f472b6, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-description {
+            font-size: 0.875rem;
+            color: #d1d5db;
+            border-left: 2px dashed #ec4899;
+            padding-left: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .social-link {
+            background: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            border: 1px dashed #4b5563;
+            text-decoration: none;
+            color: #e5e7eb;
+        }
+
+        .social-link:hover {
+            background: #ec4899;
+            transform: scale(1.1);
+        }
+
+        .footer-title {
+            color: white;
+            font-weight: bold;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px dashed #374151;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.3s;
+            border-left: 2px solid transparent;
+            padding-left: 0.5rem;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: #f472b6;
+            border-left-color: #f472b6;
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            border-top: 2px dashed rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Wireframe Labels */
+        .wireframe-label {
+            position: absolute;
+            background: #1f2937;
+            color: white;
+            font-size: 0.625rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-family: 'Courier New', monospace;
+            z-index: 20;
+        }
+
+        .section-label {
+            top: 1rem;
+            left: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="wireframe-label section-label">HEADER</div>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-emoji">🐾</div>
+                <div class="logo-text">
+                    <h1>Pawfully Helpful</h1>
+                    <p class="logo-tagline">Your pet's best friend! ✨</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#home">🏠 Home</a>
+                <a href="#dogs">🐶 Dogs</a>
+                <a href="#cats">🐱 Cats</a>
+                <a href="#rabbits">🐰 Rabbits</a>
+                <a href="#birds">🦜 Birds</a>
+            </nav>
+
+            <div class="button-group">
+                <button class="btn btn-primary">✨ Join Us</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="wireframe-label section-label">HERO SECTION</div>
+        
+        <!-- Floating Bubbles -->
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+
+        <div class="hero-content">
+            <div>
+                <div class="badge">
+                    ✨ Your Pet's Besties! 💕
+                </div>
+                
+                <h2>
+                    <span class="gradient-text">Magical Tips</span><br>
+                    <span>for Happy Pets! </span>
+                    <span style="display: inline-block; animation: bounce 1s infinite;">✨</span>
+                </h2>
+                
+                <p>
+                    Discover adorable care guides, fluffy health tips, and pawsome training advice! 
+                    We're here to help your furry, feathery, and fluffy besties live their best lives! 🌈
+                </p>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary">💝 Explore Tips</button>
+                    <button class="btn btn-secondary">⭐ Learn More</button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Cute Tips 💝</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Happy Pets 🎉</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Love & Care 💖</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1769117326204-d6cb0d3ca72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXRzJTIwZmFtaWx5fGVufDF8fHx8MTc2OTQwMDYwNHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Happy pets">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pet Categories Section -->
+    <section class="pet-categories" id="categories">
+        <div class="wireframe-label section-label">PET CATEGORIES SECTION</div>
+        
+        <div class="section-header">
+            <div class="badge">
+                ✨ So Many Cuties!
+            </div>
+            <h2 class="section-title">
+                <span class="gradient-text">Choose Your Pet Type</span>
+                <span> 💕</span>
+            </h2>
+            <p>Find pawsitively adorable care tips tailored just for your furry bestie! ✨</p>
+        </div>
+
+        <div class="categories-grid">
+            <!-- Dog Category -->
+            <div class="category-card">
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1609348490161-a879e4327ae9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGRvZyUyMHBvcnRyYWl0fGVufDF8fHx8MTc2OTMwNDcyNHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Dogs">
+                    <div class="category-emoji">🐶</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Doggies</h3>
+                    <p class="category-description">Training, nutrition, and health tips for your canine companion</p>
+                    <button class="category-button">View Tips ✨</button>
+                </div>
+            </div>
+
+            <!-- Cat Category -->
+            <div class="category-card">
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXRlJTIwY2F0fGVufDF8fHx8MTc2OTM2ODAxMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Cats">
+                    <div class="category-emoji">🐱</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Kitties</h3>
+                    <p class="category-description">Grooming, behavior, and care guides for your feline friend</p>
+                    <button class="category-button">View Tips ✨</button>
+                </div>
+            </div>
+
+            <!-- Rabbit Category -->
+            <div class="category-card">
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1695510864636-38ff5ba5a945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYWJiaXQlMjBwZXR8ZW58MXx8fHwxNzY5NDAxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Rabbits">
+                    <div class="category-emoji">🐰</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Bunnies</h3>
+                    <p class="category-description">Diet, habitat, and wellness advice for your bunny</p>
+                    <button class="category-button">View Tips ✨</button>
+                </div>
+            </div>
+
+            <!-- Bird Category -->
+            <div class="category-card">
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1670558970624-4fa5a5d6b87b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaXJkJTIwcGV0fGVufDF8fHx8MTc2OTQwMTgzOHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Birds">
+                    <div class="category-emoji">🦜</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-name">Birdies</h3>
+                    <p class="category-description">Feeding, training, and cage setup for your feathered pet</p>
+                    <button class="category-button">View Tips ✨</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section" id="tips">
+        <div class="wireframe-label section-label">TIPS SECTION</div>
+        
+        <div class="section-header">
+            <div class="badge">
+                ⭐ Trending Now! ⭐
+            </div>
+            <h2 class="section-title">
+                <span class="gradient-text">Latest Pet Care Tips</span>
+                <span> ✨</span>
+            </h2>
+            <p>Expert advice & magical guides to help your beloved cuties thrive! 💖</p>
+        </div>
+
+        <div class="tips-grid">
+            <!-- Tip 1 -->
+            <div class="tip-card">
+                <div class="tip-header">
+                    <span class="tip-badge" style="background: linear-gradient(to right, #fed7aa, #fed7aa); color: #9a3412; border-color: #fdba74;">
+                        🐶 Dogs
+                    </span>
+                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
+                </div>
+                <h3 class="tip-title">Essential Training Tips for New Puppies</h3>
+                <p class="tip-excerpt">Start training early with positive reinforcement. Consistency is key to raising a well-behaved dog.</p>
+                <div class="tip-footer">
+                    <span class="read-time">⏰ 5 min read</span>
+                    <button class="read-more">Read More →</button>
+                </div>
+            </div>
+
+            <!-- Tip 2 -->
+            <div class="tip-card">
+                <div class="tip-header">
+                    <span class="tip-badge" style="background: linear-gradient(to right, #e9d5ff, #fbcfe8); color: #6b21a8; border-color: #d8b4fe;">
+                        🐱 Cats
+                    </span>
+                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
+                </div>
+                <h3 class="tip-title">Understanding Your Cat's Body Language</h3>
+                <p class="tip-excerpt">Learn to read your cat's signals to build a stronger bond and better communication.</p>
+                <div class="tip-footer">
+                    <span class="read-time">⏰ 4 min read</span>
+                    <button class="read-more">Read More →</button>
+                </div>
+            </div>
+
+            <!-- Tip 3 -->
+            <div class="tip-card">
+                <div class="tip-header">
+                    <span class="tip-badge" style="background: linear-gradient(to right, #bbf7d0, #99f6e4); color: #14532d; border-color: #86efac;">
+                        🐰 Rabbits
+                    </span>
+                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
+                </div>
+                <h3 class="tip-title">Complete Rabbit Nutrition Guide</h3>
+                <p class="tip-excerpt">Discover the perfect diet for your rabbit including hay, vegetables, and portion control.</p>
+                <div class="tip-footer">
+                    <span class="read-time">⏰ 6 min read</span>
+                    <button class="read-more">Read More →</button>
+                </div>
+            </div>
+
+            <!-- Tip 4 -->
+            <div class="tip-card">
+                <div class="tip-header">
+                    <span class="tip-badge" style="background: linear-gradient(to right, #bfdbfe, #a5f3fc); color: #1e3a8a; border-color: #93c5fd;">
+                        🦜 Birds
+                    </span>
+                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
+                </div>
+                <h3 class="tip-title">Creating the Perfect Bird Habitat</h3>
+                <p class="tip-excerpt">Set up a safe, enriching environment with proper cage size, perches, and toys.</p>
+                <div class="tip-footer">
+                    <span class="read-time">⏰ 5 min read</span>
+                    <button class="read-more">Read More →</button>
+                </div>
+            </div>
+
+            <!-- Tip 5 -->
+            <div class="tip-card">
+                <div class="tip-header">
+                    <span class="tip-badge" style="background: linear-gradient(to right, #e5e7eb, #cbd5e1); color: #1f2937; border-color: #d1d5db;">
+                        ❄️ General
+                    </span>
+                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
+                </div>
+                <h3 class="tip-title">Seasonal Pet Care: Winter Edition</h3>
+                <p class="tip-excerpt">Keep your pets safe and comfortable during cold weather with these essential tips.</p>
+                <div class="tip-footer">
+                    <span class="read-time">⏰ 7 min read</span>
+                    <button class="read-more">Read More →</button>
+                </div>
+            </div>
+
+            <!-- Tip 6 -->
+            <div class="tip-card">
+                <div class="tip-header">
+                    <span class="tip-badge" style="background: linear-gradient(to right, #fecaca, #fbcfe8); color: #991b1b; border-color: #fca5a5;">
+                        💝 Health
+                    </span>
+                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
+                </div>
+                <h3 class="tip-title">Signs Your Pet Needs a Vet Visit</h3>
+                <p class="tip-excerpt">Recognize common symptoms and behaviors that indicate it's time for professional care.</p>
+                <div class="tip-footer">
+                    <span class="read-time">⏰ 8 min read</span>
+                    <button class="read-more">Read More →</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <button class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.125rem;">
+                View All Tips ✨
+            </button>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="wireframe-label section-label">NEWSLETTER SECTION</div>
+        
+        <!-- Floating Bubbles -->
+        <div class="bubble" style="top: 40px; left: 40px; width: 96px; height: 96px; background: white; opacity: 0.2; animation: bounce 2s infinite;"></div>
+        <div class="bubble" style="top: 80px; right: 80px; width: 128px; height: 128px; background: white; opacity: 0.1; animation: pulse 2s infinite;"></div>
+        <div class="bubble" style="bottom: 40px; left: 25%; width: 80px; height: 80px; background: white; opacity: 0.15; animation: bounce 2s infinite 0.5s;"></div>
+
+        <div class="newsletter-content">
+            <div style="margin-bottom: 2rem;">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: white; border-radius: 50%; margin-bottom: 1.5rem; animation: bounce 1s infinite;">
+                    <span style="font-size: 2.5rem;">📧</span>
+                </div>
+                
+                <h2>Join Our Cute Community! 💌</h2>
+                <p>Get weekly doses of cuteness, pawsome tips, and exclusive content delivered straight to your inbox! ✨</p>
+            </div>
+
+            <div class="newsletter-form">
+                <form class="form-group" onsubmit="event.preventDefault(); alert('Thank you for subscribing! 💕');">
+                    <input type="email" class="newsletter-input" placeholder="Your email address ✉️" required>
+                    <button type="submit" class="newsletter-button">💝 Subscribe</button>
+                </form>
+                
+                <div class="newsletter-disclaimer">
+                    ✨ No spam, just love! Unsubscribe anytime 💕
+                </div>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-emoji">🎁</div>
+                    <div class="benefit-text">Free Tips</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-emoji">✨</div>
+                    <div class="benefit-text">Weekly Updates</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-emoji">💝</div>
+                    <div class="benefit-text">Exclusive Content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wireframe-label section-label">FOOTER</div>
+        
+        <div class="footer-content">
+            <!-- Brand Column -->
+            <div>
+                <div class="footer-brand">
+                    <span style="font-size: 2rem;">🐾</span>
+                    <h3>Pawfully Helpful</h3>
+                </div>
+                <p class="footer-description">
+                    Your trusted source for expert pet care advice, tips, and guides for all your beloved companions. 💕
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">𝕏</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">▶</a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="footer-title">Quick Links 🔗</h4>
+                <ul class="footer-links">
+                    <li><a href="#">✨ About Us</a></li>
+                    <li><a href="#">💌 Contact</a></li>
+                    <li><a href="#">📝 Blog</a></li>
+                    <li><a href="#">❓ FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Pet Categories -->
+            <div>
+                <h4 class="footer-title">Pet Cuties 🐾</h4>
+                <ul class="footer-links">
+                    <li><a href="#dogs">🐶 Dogs</a></li>
+                    <li><a href="#cats">🐱 Cats</a></li>
+                    <li><a href="#rabbits">🐰 Rabbits</a></li>
+                    <li><a href="#birds">🦜 Birds</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter CTA -->
+            <div>
+                <h4 class="footer-title">Stay Connected 💕</h4>
+                <p class="footer-description">
+                    Join 10,000+ pet lovers getting weekly tips!
+                </p>
+                <button class="btn btn-primary" style="width: 100%;">Subscribe Now ✨</button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Pawfully Helpful. All rights reserved. • 
+                Made with <span style="color: #f472b6;">💖</span> for pet lovers ✨
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle heart like functionality
+        function toggleHeart(button) {
+            if (button.classList.contains('liked')) {
+                button.classList.remove('liked');
+                button.textContent = '🤍';
+            } else {
+                button.classList.add('liked');
+                button.textContent = '💖';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add sparkle effect on button hover
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 0 30px rgba(236, 72, 153, 0.6)';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '';
+            });
+        });
+    </script>
+
+</body>
+</html>
