@@ -758,20 +758,3 @@ footer {
         opacity: 0.5;
     }
 }
-
-/* Wireframe Labels */
-.wireframe-label {
-    position: absolute;
-    background: #1f2937;
-    color: white;
-    font-size: 0.625rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-    font-family: 'Courier New', monospace;
-    z-index: 20;
-}
-
-.section-label {
-    top: 1rem;
-    left: 1rem;
-}
