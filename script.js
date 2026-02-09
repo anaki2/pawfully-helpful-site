@@ -32,5 +32,6 @@ document.querySelectorAll('.btn-primary').forEach(button => {
         this.style.boxShadow = '';
     });
 });
+
 // Test
 // Test
