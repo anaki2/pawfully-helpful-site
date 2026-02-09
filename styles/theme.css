@@ -1,7 +1,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-   --background: #f7f7ff;
+  --background: hotpink;
   --foreground: #15162a;
 
   --primary: #5b5ce6;
