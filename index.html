@@ -1,365 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawfully Helpful - Your Pet's Best Friend! ✨</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawfully Helpful - Your Pet's Best Friend! ✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="header-content">
-            <div class="logo-container">
-                <div class="logo-emoji">🐾</div>
-                <div class="logo-text">
-                    <h1>Pawfully Helpful</h1>
-                    <p class="logo-tagline">Your pet's best friend! ✨</p>
-                </div>
-            </div>
+<header>
+  <div class="header-content">
+    <div class="logo-container">
+      <div class="logo-emoji">🐾</div>
+      <div class="logo-text">
+        <h1>Pawfully Helpful</h1>
+        <p class="logo-tagline">Your pet's best friend! ✨</p>
+      </div>
+    </div>
 
-            <nav>
-                <a href="#home">🏠 Home</a>
-                <a href="#dogs">🐶 Dogs</a>
-                <a href="#cats">🐱 Cats</a>
-                <a href="#rabbits">🐰 Rabbits</a>
-                <a href="#birds">🦜 Birds</a>
-            </nav>
+    <nav>
+      <a href="index.html" class="active">🏠 Home</a>
+      <a href="dogs.html">🐶 Dogs</a>
+      <a href="cats.html">🐱 Cats</a>
+      <a href="rabbits.html">🐰 Rabbits</a>
+      <a href="birds.html">🦜 Birds</a>
+    </nav>
 
-            <div class="button-group">
-                <button class="btn btn-primary">✨ Join Us</button>
-            </div>
+    <div class="button-group">
+      <button class="btn btn-primary">✨ Join Us</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="bubble bubble-1"></div>
+  <div class="bubble bubble-2"></div>
+  <div class="bubble bubble-3"></div>
+
+  <div class="hero-content">
+    <div>
+      <div class="badge">✨ Your Pet's Besties! 💕</div>
+
+      <h2>
+        <span class="gradient-text">Magical Tips</span><br>
+        <span>for Happy Pets! </span>
+        <span style="display:inline-block; animation:bounce 1s infinite;">✨</span>
+      </h2>
+
+      <p>
+        Discover adorable care guides, fluffy health tips, and pawsome training advice!
+        We're here to help your furry, feathery, and fluffy besties live their best lives! 🌈
+      </p>
+
+      <div class="button-group">
+        <a class="btn btn-primary" href="dogs.html">🐶 Explore Dog Tips</a>
+        <a class="btn btn-secondary" href="cats.html">🐱 Explore Cat Tips</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Cute Tips 💝</div>
         </div>
-    </header>
-
-    <section class="hero" id="home">
-        
-        <div class="bubble bubble-1"></div>
-        <div class="bubble bubble-2"></div>
-        <div class="bubble bubble-3"></div>
-
-        <div class="hero-content">
-            <div>
-                <div class="badge">
-                    ✨ Your Pet's Besties! 💕
-                </div>
-                
-                <h2>
-                    <span class="gradient-text">Magical Tips</span><br>
-                    <span>for Happy Pets! </span>
-                    <span style="display: inline-block; animation: bounce 1s infinite;">✨</span>
-                </h2>
-                
-                <p>
-                    Discover adorable care guides, fluffy health tips, and pawsome training advice! 
-                    We're here to help your furry, feathery, and fluffy besties live their best lives! 🌈
-                </p>
-                
-                <div class="button-group">
-                    <button class="btn btn-primary">💝 Explore Tips</button>
-                    <button class="btn btn-secondary">⭐ Learn More</button>
-                </div>
-
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Cute Tips 💝</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">10K+</div>
-                        <div class="stat-label">Happy Pets 🎉</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Love & Care 💖</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1769117326204-d6cb0d3ca72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXRzJTIwZmFtaWx5fGVufDF8fHx8MTc2OTQwMDYwNHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Happy pets">
-            </div>
+        <div class="stat-card">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label">Happy Pets 🎉</div>
         </div>
-    </section>
-
-    <section class="pet-categories" id="categories">
-        
-        <div class="section-header">
-            <div class="badge">
-                ✨ So Many Cuties!
-            </div>
-            <h2 class="section-title">
-                <span class="gradient-text">Choose Your Pet Type</span>
-                <span> 💕</span>
-            </h2>
-            <p>Find pawsitively adorable care tips tailored just for your furry bestie! ✨</p>
+        <div class="stat-card">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Love & Care 💖</div>
         </div>
+      </div>
+    </div>
 
-        <div class="categories-grid">
-            <div class="category-card">
-                <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1609348490161-a879e4327ae9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGRvZyUyMHBvcnRyYWl0fGVufDF8fHx8MTc2OTMwNDcyNHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Dogs">
-                    <div class="category-emoji">🐶</div>
-                </div>
-                <div class="category-content">
-                    <h3 class="category-name">Doggies</h3>
-                    <p class="category-description">Training, nutrition, and health tips for your canine companion</p>
-                    <button class="category-button">View Tips ✨</button>
-                </div>
-            </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80" alt="Happy dog">
+    </div>
+  </div>
+</section>
 
-            <div class="category-card">
-                <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXRlJTIwY2F0fGVufDF8fHx8MTc2OTM2ODAxMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Cats">
-                    <div class="category-emoji">🐱</div>
-                </div>
-                <div class="category-content">
-                    <h3 class="category-name">Kitties</h3>
-                    <p class="category-description">Grooming, behavior, and care guides for your feline friend</p>
-                    <button class="category-button">View Tips ✨</button>
-                </div>
-            </div>
+<section class="pet-categories">
+  <div class="section-header">
+    <div class="badge">✨ Explore</div>
+    <h2 class="section-title">
+      <span class="gradient-text">Choose Your Pet Type</span> 💕
+    </h2>
+    <p>Click a section to view tips for that pet!</p>
+  </div>
 
-            <div class="category-card">
-                <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1695510864636-38ff5ba5a945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYWJiaXQlMjBwZXR8ZW58MXx8fHwxNzY5NDAxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Rabbits">
-                    <div class="category-emoji">🐰</div>
-                </div>
-                <div class="category-content">
-                    <h3 class="category-name">Bunnies</h3>
-                    <p class="category-description">Diet, habitat, and wellness advice for your bunny</p>
-                    <button class="category-button">View Tips ✨</button>
-                </div>
-            </div>
+  <div class="categories-grid">
+    <div class="category-card" onclick="location.href='dogs.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1200&q=80" alt="Dogs">
+        <div class="category-emoji">🐶</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Dogs</h3>
+        <p class="category-description">Training, nutrition, and health tips for your pup</p>
+        <button class="category-button">View Dogs ✨</button>
+      </div>
+    </div>
 
-            <div class="category-card">
-                <div class="category-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1670558970624-4fa5a5d6b87b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaXJkJTIwcGV0fGVufDF8fHx8MTc2OTQwMTgzOHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Birds">
-                    <div class="category-emoji">🦜</div>
-                </div>
-                <div class="category-content">
-                    <h3 class="category-name">Birdies</h3>
-                    <p class="category-description">Feeding, training, and cage setup for your feathered pet</p>
-                    <button class="category-button">View Tips ✨</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="category-card" onclick="location.href='cats.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200&q=80" alt="Cats">
+        <div class="category-emoji">🐱</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Cats</h3>
+        <p class="category-description">Behavior, grooming, and bonding for your kitty</p>
+        <button class="category-button">View Cats ✨</button>
+      </div>
+    </div>
 
-    <section class="tips-section" id="tips">
-        
-        <div class="section-header">
-            <div class="badge">
-                ⭐ Trending Now! ⭐
-            </div>
-            <h2 class="section-title">
-                <span class="gradient-text">Latest Pet Care Tips</span>
-                <span> ✨</span>
-            </h2>
-            <p>Expert advice & magical guides to help your beloved cuties thrive! 💖</p>
-        </div>
+    <div class="category-card" onclick="location.href='rabbits.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=1200&q=80" alt="Rabbits">
+        <div class="category-emoji">🐰</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Rabbits</h3>
+        <p class="category-description">Diet, habitat, and wellness for your bunny</p>
+        <button class="category-button">View Rabbits ✨</button>
+      </div>
+    </div>
 
-        <div class="tips-grid">
-            <div class="tip-card">
-                <div class="tip-header">
-                    <span class="tip-badge" style="background: linear-gradient(to right, #fed7aa, #fed7aa); color: #9a3412; border-color: #fdba74;">
-                        🐶 Dogs
-                    </span>
-                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
-                </div>
-                <h3 class="tip-title">Essential Training Tips for New Puppies</h3>
-                <p class="tip-excerpt">Start training early with positive reinforcement. Consistency is key to raising a well-behaved dog.</p>
-                <div class="tip-footer">
-                    <span class="read-time">⏰ 5 min read</span>
-                    <button class="read-more">Read More →</button>
-                </div>
-            </div>
+    <div class="category-card" onclick="location.href='birds.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200&q=80" alt="Birds">
+        <div class="category-emoji">🦜</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Birds</h3>
+        <p class="category-description">Cage setup, feeding, and enrichment for birds</p>
+        <button class="category-button">View Birds ✨</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="tip-card">
-                <div class="tip-header">
-                    <span class="tip-badge" style="background: linear-gradient(to right, #e9d5ff, #fbcfe8); color: #6b21a8; border-color: #d8b4fe;">
-                        🐱 Cats
-                    </span>
-                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
-                </div>
-                <h3 class="tip-title">Understanding Your Cat's Body Language</h3>
-                <p class="tip-excerpt">Learn to read your cat's signals to build a stronger bond and better communication.</p>
-                <div class="tip-footer">
-                    <span class="read-time">⏰ 4 min read</span>
-                    <button class="read-more">Read More →</button>
-                </div>
-            </div>
-
-            <div class="tip-card">
-                <div class="tip-header">
-                    <span class="tip-badge" style="background: linear-gradient(to right, #bbf7d0, #99f6e4); color: #14532d; border-color: #86efac;">
-                        🐰 Rabbits
-                    </span>
-                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
-                </div>
-                <h3 class="tip-title">Complete Rabbit Nutrition Guide</h3>
-                <p class="tip-excerpt">Discover the perfect diet for your rabbit including hay, vegetables, and portion control.</p>
-                <div class="tip-footer">
-                    <span class="read-time">⏰ 6 min read</span>
-                    <button class="read-more">Read More →</button>
-                </div>
-            </div>
-
-            <div class="tip-card">
-                <div class="tip-header">
-                    <span class="tip-badge" style="background: linear-gradient(to right, #bfdbfe, #a5f3fc); color: #1e3a8a; border-color: #93c5fd;">
-                        🦜 Birds
-                    </span>
-                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
-                </div>
-                <h3 class="tip-title">Creating the Perfect Bird Habitat</h3>
-                <p class="tip-excerpt">Set up a safe, enriching environment with proper cage size, perches, and toys.</p>
-                <div class="tip-footer">
-                    <span class="read-time">⏰ 5 min read</span>
-                    <button class="read-more">Read More →</button>
-                </div>
-            </div>
-
-            <div class="tip-card">
-                <div class="tip-header">
-                    <span class="tip-badge" style="background: linear-gradient(to right, #e5e7eb, #cbd5e1); color: #1f2937; border-color: #d1d5db;">
-                        ❄️ General
-                    </span>
-                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
-                </div>
-                <h3 class="tip-title">Seasonal Pet Care: Winter Edition</h3>
-                <p class="tip-excerpt">Keep your pets safe and comfortable during cold weather with these essential tips.</p>
-                <div class="tip-footer">
-                    <span class="read-time">⏰ 7 min read</span>
-                    <button class="read-more">Read More →</button>
-                </div>
-            </div>
-
-            <div class="tip-card">
-                <div class="tip-header">
-                    <span class="tip-badge" style="background: linear-gradient(to right, #fecaca, #fbcfe8); color: #991b1b; border-color: #fca5a5;">
-                        💝 Health
-                    </span>
-                    <button class="heart-button" onclick="toggleHeart(this)">🤍</button>
-                </div>
-                <h3 class="tip-title">Signs Your Pet Needs a Vet Visit</h3>
-                <p class="tip-excerpt">Recognize common symptoms and behaviors that indicate it's time for professional care.</p>
-                <div class="tip-footer">
-                    <span class="read-time">⏰ 8 min read</span>
-                    <button class="read-more">Read More →</button>
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 3rem;">
-            <button class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.125rem;">
-                View All Tips ✨
-            </button>
-        </div>
-    </section>
-
-    <section class="newsletter">
-        
-        <div class="bubble" style="top: 40px; left: 40px; width: 96px; height: 96px; background: white; opacity: 0.2; animation: bounce 2s infinite;"></div>
-        <div class="bubble" style="top: 80px; right: 80px; width: 128px; height: 128px; background: white; opacity: 0.1; animation: pulse 2s infinite;"></div>
-        <div class="bubble" style="bottom: 40px; left: 25%; width: 80px; height: 80px; background: white; opacity: 0.15; animation: bounce 2s infinite 0.5s;"></div>
-
-        <div class="newsletter-content">
-            <div style="margin-bottom: 2rem;">
-                <div style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: white; border-radius: 50%; margin-bottom: 1.5rem; animation: bounce 1s infinite;">
-                    <span style="font-size: 2.5rem;">📧</span>
-                </div>
-                
-                <h2>Join Our Cute Community! 💌</h2>
-                <p>Get weekly doses of cuteness, pawsome tips, and exclusive content delivered straight to your inbox! ✨</p>
-            </div>
-
-            <div class="newsletter-form">
-                <form class="form-group" onsubmit="event.preventDefault(); alert('Thank you for subscribing! 💕');">
-                    <input type="email" class="newsletter-input" placeholder="Your email address ✉️" required>
-                    <button type="submit" class="newsletter-button">💝 Subscribe</button>
-                </form>
-                
-                <div class="newsletter-disclaimer">
-                    ✨ No spam, just love! Unsubscribe anytime 💕
-                </div>
-            </div>
-
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-emoji">🎁</div>
-                    <div class="benefit-text">Free Tips</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-emoji">✨</div>
-                    <div class="benefit-text">Weekly Updates</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-emoji">💝</div>
-                    <div class="benefit-text">Exclusive Content</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        
-        <div class="footer-content">
-            <div>
-                <div class="footer-brand">
-                    <span style="font-size: 2rem;">🐾</span>
-                    <h3>Pawfully Helpful</h3>
-                </div>
-                <p class="footer-description">
-                    Your trusted source for expert pet care advice, tips, and guides for all your beloved companions. 💕
-                </p>
-                <div class="social-links">
-                    <a href="#" class="social-link">f</a>
-                    <a href="#" class="social-link">𝕏</a>
-                    <a href="#" class="social-link">📷</a>
-                    <a href="#" class="social-link">▶</a>
-                </div>
-            </div>
-
-            <div>
-                <h4 class="footer-title">Quick Links 🔗</h4>
-                <ul class="footer-links">
-                    <li><a href="#">✨ About Us</a></li>
-                    <li><a href="#">💌 Contact</a></li>
-                    <li><a href="#">📝 Blog</a></li>
-                    <li><a href="#">❓ FAQ</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="footer-title">Pet Cuties 🐾</h4>
-                <ul class="footer-links">
-                    <li><a href="#dogs">🐶 Dogs</a></li>
-                    <li><a href="#cats">🐱 Cats</a></li>
-                    <li><a href="#rabbits">🐰 Rabbits</a></li>
-                    <li><a href="#birds">🦜 Birds</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="footer-title">Stay Connected 💕</h4>
-                <p class="footer-description">
-                    Join 10,000+ pet lovers getting weekly tips!
-                </p>
-                <button class="btn btn-primary" style="width: 100%;">Subscribe Now ✨</button>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>
-                © 2026 Pawfully Helpful. All rights reserved. • 
-                Made with <span style="color: #f472b6;">💖</span> for pet lovers ✨
-            </p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<footer>
+  <div class="footer-bottom">
+    <p>© 2026 Pawfully Helpful • Made with 💖 for pet lovers ✨</p>
+  </div>
+</footer>
 
 </body>
 </html>
