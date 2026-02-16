@@ -697,11 +697,15 @@ footer {
   box-shadow: var(--shadow-sm);
 }
 
-.resources-section {
-  padding: 5rem 1.5rem;
-  background: white;
-  text-align: center;
+.resources-section img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  display: block;
+  margin: 2rem auto;
 }
+
 
 .resource-list {
   list-style: none;
