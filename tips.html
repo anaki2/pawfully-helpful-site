@@ -1,184 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Submit a Tip — Pawfully Helpful</title>
-    <style>
-        :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
-        body{max-width:900px;margin:32px auto;padding:20px;color:#222;line-height:1.4;}
-        header{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
-        header a{color:#0066cc;text-decoration:none;}
-        h1{margin:0;font-size:1.5rem;}
-        form{background:#fbfbfb;border:1px solid #e6e6e6;padding:18px;border-radius:8px;}
-        .row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;}
-        label{display:block;font-size:.95rem;margin-bottom:6px;}
-        input[type="text"], input[type="email"], select, textarea {
-            width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;font-size:1rem;
-        }
-        textarea{min-height:120px;resize:vertical;}
-        .col{flex:1 1 220px;min-width:220px;}
-        .small{flex:0 0 140px;min-width:140px;}
-        .actions{display:flex;gap:10px;align-items:center;margin-top:12px;}
-        button{background:#0078d4;color:#fff;border:none;padding:10px 14px;border-radius:6px;cursor:pointer;}
-        button.secondary{background:#eaeaea;color:#222;}
-        .muted{color:#666;font-size:.9rem;}
-        #preview{max-width:220px;max-height:160px;display:block;margin-top:8px;border-radius:6px;border:1px solid #ddd;}
-        .notice{padding:10px;border-radius:6px;margin-top:12px;}
-        .notice.success{background:#e6ffed;border:1px solid #b8f0c9;color:#1a7f3a;}
-        .notice.error{background:#fff1f1;border:1px solid #f2c6c6;color:#9b2b2b;}
-        @media (max-width:520px){ .col,.small{min-width:100%;} }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Submit a Tip — Pawfully Helpful</title>
+
+
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <header>
-        <a href="index.html" aria-label="Home">← Home</a>
-        <h1>Submit a Tip</h1>
-    </header>
 
-    <main>
-        <p class="muted">Share a sighting, helpful hint, rescue note, or other pawfully useful tip. Fields marked with * are required.</p>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <div class="logo-emoji">
+          <img src="images/dog-logo.png" alt="Dog logo">
+        </div>
+        <div class="logo-text">
+          <h1 class="gradient-text">Pawfully Helpful</h1>
+          <p class="logo-tagline">Your pet's best friend!</p>
+        </div>
+      </div>
 
-        <form id="tipForm" action="/submit-tip" method="post" enctype="multipart/form-data" novalidate>
-            <div class="row">
-                <div class="col">
-                    <label for="title">Title *</label>
-                    <input id="title" name="title" type="text" required maxlength="120" placeholder="Short descriptive title">
-                </div>
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="dogs.html">🐶 Dogs</a>
+        <a href="cats.html">🐱 Cats</a>
+        <a href="rabbits.html">🐰 Rabbits</a>
+        <a href="birds.html">🐦 Birds</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-                <div class="small">
-                    <label for="category">Category *</label>
-                    <select id="category" name="category" required>
-                        <option value="">Choose…</option>
-                        <option>Bird</option>
-                        <option>Mammal</option>
-                        <option>Reptile/Amphibian</option>
-                        <option>Habitat/Plant</option>
-                        <option>Rescue/Found</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-            </div>
+  <section class="submission-wrapper">
+    <div class="submission-card">
+      <h2>Submit a Tip</h2>
+      <p class="muted">Share a helpful tip with the Pawfully Helpful community.</p>
 
-            <div class="row">
-                <div class="col">
-                    <label for="location">Location *</label>
-                    <input id="location" name="location" type="text" required placeholder="City, park, or GPS coordinates">
-                </div>
+      <form id="tipForm" action="/submit-tip" method="post" enctype="multipart/form-data" novalidate>
 
-                <div class="small">
-                    <label for="date">Date</label>
-                    <input id="date" name="date" type="date">
-                </div>
-            </div>
+        <div class="input-group">
+          <label for="title">Title *</label>
+          <input id="title" name="title" type="text" required maxlength="120">
+        </div>
 
-            <div class="row">
-                <div style="flex:1 1 100%;">
-                    <label for="description">Description *</label>
-                    <textarea id="description" name="description" required placeholder="What did you observe or recommend? Include any identifying details."></textarea>
-                </div>
-            </div>
+        <div class="input-group">
+          <label for="category">Category *</label>
+          <select id="category" name="category" required>
+            <option value="">Choose…</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Rabbit</option>
+            <option>Bird</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-            <div class="row" aria-live="polite">
-                <div class="col">
-                    <label for="photo">Photo (optional)</label>
-                    <input id="photo" name="photo" type="file" accept="image/*">
-                    <img id="preview" alt="Image preview" hidden>
-                </div>
+        <div class="input-group">
+          <label for="description">Description *</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
 
-                <div class="small">
-                    <label for="contact">Contact (optional)</label>
-                    <input id="contact" name="contact" type="email" placeholder="email@example.com">
-                    <div class="muted" style="margin-top:6px;font-size:.85rem">If you want a reply, provide an email.</div>
-                </div>
-            </div>
+        <div class="input-group">
+          <label for="photo">Photo (optional)</label>
+          <input id="photo" name="photo" type="file" accept="image/*">
+        </div>
 
-            <div class="row">
-                <label style="display:flex;align-items:center;gap:10px;">
-                    <input id="consent" name="consent" type="checkbox" required>
-                    <span>I confirm this tip is accurate to the best of my knowledge and I consent to its publication.*</span>
-                </label>
-            </div>
+        <div class="input-group">
+          <label for="contact">Email (optional)</label>
+          <input id="contact" name="contact" type="email">
+        </div>
 
-            <div class="actions">
-                <button type="submit">Send Tip</button>
-                <button type="button" class="secondary" id="resetBtn">Reset</button>
-                <div id="formMessage" style="flex:1"></div>
-            </div>
-        </form>
+        <div class="input-group">
+          <label style="display:flex;gap:8px;align-items:center;">
+            <input id="consent" name="consent" type="checkbox" required>
+            I confirm this tip is accurate.*
+          </label>
+        </div>
 
-        <p class="muted" style="margin-top:14px">By submitting you agree to our <a href="privacy.html">privacy policy</a>. For urgent animal welfare issues contact local authorities.</p>
-    </main>
+        <div style="margin-top:20px;">
+          <button type="submit" class="btn btn-primary">Send Tip</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
 
-    <script>
-        (function(){
-            const form = document.getElementById('tipForm');
-            const photo = document.getElementById('photo');
-            const preview = document.getElementById('preview');
-            const resetBtn = document.getElementById('resetBtn');
-            const msg = document.getElementById('formMessage');
+        <div id="formMessage" style="margin-top:15px;"></div>
 
-            photo.addEventListener('change', () => {
-                const file = photo.files && photo.files[0];
-                if (!file) { preview.hidden = true; preview.src = ''; return; }
-                if (!file.type.startsWith('image/')) { preview.hidden = true; preview.src = ''; return; }
-                const url = URL.createObjectURL(file);
-                preview.src = url; preview.hidden = false;
-            });
+      </form>
+    </div>
+  </section>
 
-            resetBtn.addEventListener('click', () => {
-                form.reset();
-                preview.hidden = true;
-                preview.src = '';
-                msg.innerHTML = '';
-            });
+  <script>
+    (function(){
+      const form = document.getElementById('tipForm');
+      const photo = document.getElementById('photo');
+      const msg = document.getElementById('formMessage');
 
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                msg.innerHTML = '';
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        msg.innerHTML = '';
 
-                if (!form.reportValidity()) return;
+        if (!form.reportValidity()) return;
 
-                const data = new FormData(form);
-                // Simple client-side size check (limit 8MB)
-                const f = data.get('photo');
-                if (f && f.size && f.size > 8 * 1024 * 1024) {
-                    showMessage('Photo must be under 8 MB.', 'error');
-                    return;
-                }
+        const data = new FormData(form);
 
-                showMessage('Sending...', 'muted');
+        try {
+          showMessage('Tip submitted successfully!', 'success');
+          form.reset();
+        } catch (err) {
+          showMessage('Submission failed.', 'error');
+        }
+      });
 
-                try {
-                    // Replace action URL with real endpoint on server.
-                    const resp = await fetch(form.action, {
-                        method: form.method,
-                        body: data,
-                    });
+      function showMessage(text, type){
+        msg.innerHTML = '';
+        const d = document.createElement('div');
+        d.className = 'notice ' + type;
+        d.textContent = text;
+        msg.appendChild(d);
+      }
+    })();
+  </script>
 
-                    if (!resp.ok) {
-                        const text = await resp.text().catch(()=>resp.statusText);
-                        throw new Error(text || 'Server error');
-                    }
-
-                    // Assume server returns JSON { success: true, id: "123" }
-                    const json = await resp.json().catch(()=>({success:true}));
-                    showMessage('Thanks — your tip was submitted.' + (json && json.id ? ' ID: ' + json.id : ''), 'success');
-                    form.reset();
-                    preview.hidden = true;
-                } catch (err) {
-                    showMessage('Submission failed: ' + (err.message || 'Unknown error'), 'error');
-                }
-            });
-
-            function showMessage(text, type){
-                msg.innerHTML = '';
-                const d = document.createElement('div');
-                d.className = 'notice ' + (type === 'success' ? 'success' : type === 'error' ? 'error' : '');
-                d.textContent = text;
-                msg.appendChild(d);
-            }
-        })();
-    </script>
 </body>
 </html>
