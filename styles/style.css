@@ -1,5 +1,5 @@
 /* =========================
-   THEME VARIABLES
+   THEME 
    ========================= */
 :root {
   --bg: #f7f7ff;
@@ -20,9 +20,6 @@
   --shadow-lg: 0 20px 40px rgba(91, 92, 230, 0.25);
 }
 
-/* =========================
-   RESET + BASE
-   ========================= */
 * {
   margin: 0;
   padding: 0;
@@ -51,19 +48,17 @@ a {
    ACCESSIBILITY AND READABILITY
    ========================= */
 
-/* Focus outline for keyboard navigation */
+
 a:focus,
 button:focus {
   outline: 3px solid var(--brand-2);
   outline-offset: 3px;
 }
 
-/* Improve readability */
 p {
   max-width: 70ch;
 }
 
-/* Improve link clarity */
 nav a {
   text-decoration: none;
 }
