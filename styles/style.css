@@ -91,35 +91,22 @@ header {
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.logo-container:hover {
-  transform: scale(1.02);
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo-emoji img {
-    width: 60px;
+    width: 65px;
     height: auto;
 }
 
 .logo-text h1 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--brand-1), var(--brand-2), var(--brand-3));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    margin: 0;
 }
 
 .logo-tagline {
-  font-size: 0.75rem;
-  color: var(--brand-2);
-  font-weight: 500;
+    margin: 0;
 }
 
 nav {
