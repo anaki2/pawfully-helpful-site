@@ -685,17 +685,16 @@ footer {
    ========================= */
 
 .resources-image {
-  max-width: 600px;     
-  margin: 2rem auto;    
+  text-align: center;   
+  margin: 2rem auto;
 }
 
 .resources-image img {
-  width: 100%;
-  height: 250px;        
+  width: 100px;       
+  height: 100px;     
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: var(--shadow-md);
-  display: block;
+  border-radius: 50%; 
+  box-shadow: var(--shadow-sm);
 }
 
 .resources-section {
