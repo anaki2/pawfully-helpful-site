@@ -640,7 +640,7 @@ footer {
 
 .comparison-section {
   padding: 5rem 1.5rem;
-  background: var(--soft-1);
+  background: red;
 }
 
 .comparison-wrapper {
