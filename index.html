@@ -3,32 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawfully Helpful - Your Pet's Best Friend! ✨</title>
 
-  <!-- SEO Title -->
-  <title>Pawfully Helpful | Pet Care Tips for Dogs, Cats, Rabbits & Birds</title>
-
-  <!-- SEO Meta Description -->
-  <meta name="description" content="Pawfully Helpful provides expert pet care tips for dogs, cats, rabbits, and birds. Learn training, nutrition, grooming, and health advice to keep your pets happy and healthy." />
-
-  <!-- SEO Keywords -->
-  <meta name="keywords" content="pet care, dog tips, cat care, rabbit health, bird care, pet training, pet nutrition, animal wellness" />
-
-  <!-- Author -->
-  <meta name="author" content="Kiana Cooper" />
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="Pawfully Helpful - Your Pet's Best Friend" />
-  <meta property="og:description" content="Discover expert pet care guides for dogs, cats, rabbits, and birds." />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/style.css?v=7">
 
 </head>
 
@@ -36,128 +14,138 @@
 
 <header>
   <div class="header-content">
-
-    <!-- Logo -->
     <div class="logo-container">
-      <div class="logo-emoji" aria-hidden="true">🐾</div>
+      <div class="logo-emoji">🐾</div>
       <div class="logo-text">
         <h1>Pawfully Helpful</h1>
-        <p class="logo-tagline">Your Pet's Best Friend</p>
+        <p class="logo-tagline">Your pet's best friend! ✨</p>
       </div>
     </div>
 
-    <!-- Navigation -->
-    <nav aria-label="Main Navigation">
-      <ul class="nav-list">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="html/dogs.html">Dogs</a></li>
-        <li><a href="html/cats.html">Cats</a></li>
-        <li><a href="html/rabbits.html">Rabbits</a></li>
-        <li><a href="html/birds.html">Birds</a></li>
-      </ul>
-    </nav>
+<nav>
+  <a href="index.html" class="active">🏠 Home</a>
+  <a href="html/dogs.html">🐶 Dogs</a>
+  <a href="html/cats.html">🐱 Cats</a>
+  <a href="html/rabbits.html">🐰 Rabbits</a>
+  <a href="html/birds.html">🦜 Birds</a>
+</nav>
 
-    <!-- CTA -->
     <div class="button-group">
-      <a href="#newsletter" class="btn btn-primary">Join Our Pet Community</a>
+      <button class="btn btn-primary">✨ Join Us</button>
     </div>
-
   </div>
 </header>
 
-<main>
-
-<!-- HERO SECTION -->
 <section class="hero">
+  <div class="bubble bubble-1"></div>
+  <div class="bubble bubble-2"></div>
+  <div class="bubble bubble-3"></div>
+
   <div class="hero-content">
     <div>
-      <h2>Expert Pet Care Tips for Happy & Healthy Pets</h2>
+      <div class="badge">✨ Your Pet's Besties! 💕</div>
+
+      <h2>
+        <span class="gradient-text">Magical Tips</span><br>
+        <span>for Happy Pets! </span>
+        <span style="display:inline-block; animation:bounce 1s infinite;">✨</span>
+      </h2>
 
       <p>
-        Find trusted advice on training, nutrition, grooming, and wellness for dogs, cats, rabbits, and birds.
-        Helping pet owners make informed decisions every day.
+        Discover adorable care guides, fluffy health tips, and pawsome training advice!
+        We're here to help your furry, feathery, and fluffy besties live their best lives! 🌈
       </p>
 
       <div class="button-group">
-        <a class="btn btn-primary" href="html/dogs.html">Explore Dog Tips</a>
-        <a class="btn btn-secondary" href="html/cats.html">Explore Cat Tips</a>
+        <a class="btn btn-primary" href="dogs.html">🐶 Explore Dog Tips</a>
+        <a class="btn btn-secondary" href="cats.html">🐱 Explore Cat Tips</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Cute Tips 💝</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10K+</div>
+          <div class="stat-label">Happy Pets 🎉</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Love & Care 💖</div>
+        </div>
       </div>
     </div>
 
     <div class="hero-image">
-      <img 
-        src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80" 
-        alt="Happy dog smiling outdoors"
-        loading="lazy"
-      >
+      <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80" alt="Happy dog">
     </div>
   </div>
 </section>
 
-<!-- PET CATEGORIES -->
 <section class="pet-categories">
   <div class="section-header">
-    <h2>Browse Pet Care Guides by Animal Type</h2>
-    <p>Select your pet to view specialized care information.</p>
+    <div class="badge">✨ Explore</div>
+    <h2 class="section-title">
+      <span class="gradient-text">Choose Your Pet Type</span> 💕
+    </h2>
+    <p>Click a section to view tips for that pet!</p>
   </div>
 
   <div class="categories-grid">
+    <div class="category-card" onclick="location.href='dogs.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1200&q=80" alt="Dogs">
+        <div class="category-emoji">🐶</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Dogs</h3>
+        <p class="category-description">Training, nutrition, and health tips for your pup</p>
+        <button class="category-button">View Dogs ✨</button>
+      </div>
+    </div>
 
-    <article class="category-card">
-      <a href="html/dogs.html">
-        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800&q=80" alt="Golden retriever dog">
-        <h3>Dog Care</h3>
-        <p>Training tips, health guidance, grooming advice, and nutrition plans for dogs.</p>
-      </a>
-    </article>
+    <div class="category-card" onclick="location.href='cats.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200&q=80" alt="Cats">
+        <div class="category-emoji">🐱</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Cats</h3>
+        <p class="category-description">Behavior, grooming, and bonding for your kitty</p>
+        <button class="category-button">View Cats ✨</button>
+      </div>
+    </div>
 
-    <article class="category-card">
-      <a href="html/cats.html">
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800&q=80" alt="Gray cat looking curious">
-        <h3>Cat Care</h3>
-        <p>Behavior guidance, litter training, enrichment ideas, and wellness advice.</p>
-      </a>
-    </article>
+    <div class="category-card" onclick="location.href='rabbits.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=1200&q=80" alt="Rabbits">
+        <div class="category-emoji">🐰</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Rabbits</h3>
+        <p class="category-description">Diet, habitat, and wellness for your bunny</p>
+        <button class="category-button">View Rabbits ✨</button>
+      </div>
+    </div>
 
-    <article class="category-card">
-      <a href="html/rabbits.html">
-        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=800&q=80" alt="Brown rabbit in grass">
-        <h3>Rabbit Care</h3>
-        <p>Habitat setup, diet recommendations, and bunny health essentials.</p>
-      </a>
-    </article>
-
-    <article class="category-card">
-      <a href="html/birds.html">
-        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800&q=80" alt="Colorful parrot">
-        <h3>Bird Care</h3>
-        <p>Cage setup, enrichment techniques, feeding guides, and training tips.</p>
-      </a>
-    </article>
-
+    <div class="category-card" onclick="location.href='birds.html'">
+      <div class="category-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=1200&q=80" alt="Birds">
+        <div class="category-emoji">🦜</div>
+      </div>
+      <div class="category-content">
+        <h3 class="category-name">Birds</h3>
+        <p class="category-description">Cage setup, feeding, and enrichment for birds</p>
+        <button class="category-button">View Birds ✨</button>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- NEWSLETTER / MARKETING SECTION -->
-<section id="newsletter" class="newsletter">
-  <h2>Get Weekly Pet Care Tips</h2>
-  <p>Join our email list to receive expert advice, new blog updates, and pet wellness reminders.</p>
-
-  <form>
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required>
-    <button type="submit" class="btn btn-primary">Subscribe</button>
-  </form>
-</section>
-
-</main>
-
 <footer>
-  <div class="footer-content">
-    <p>© 2026 Pawfully Helpful</p>
-    <p>
-      Helping pet owners with trusted, research-backed advice for better pet care.
-    </p>
+  <div class="footer-bottom">
+    <p>© 2026 Pawfully Helpful • Made with 💖 for pet lovers ✨</p>
   </div>
 </footer>
 
