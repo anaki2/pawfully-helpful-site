@@ -286,12 +286,7 @@ nav a.active {
 }
 
 .gradient-text {
-  background: linear-gradient(
-    135deg,
-    var(--brand-1),
-    var(--brand-2),
-    var(--brand-3)
-  );
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2), var(--brand-3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
