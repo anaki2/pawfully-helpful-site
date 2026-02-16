@@ -78,11 +78,14 @@ nav a:hover {
    HEADER
    ========================= */
 header {
-  background: linear-gradient(
-    135deg,
-    var(--soft-1),
-    var(--soft-2)
-  );
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
 
 .header-content {
   max-width: 1200px;
@@ -222,7 +225,6 @@ nav a.active {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(91, 92, 230, 0.35);
-}
 
 .btn-secondary {
   background: white;
@@ -346,7 +348,6 @@ nav a.active {
   display: block;
 }
 
-/* Floating bubbles */
 .bubble {
   position: absolute;
   border-radius: 50%;
