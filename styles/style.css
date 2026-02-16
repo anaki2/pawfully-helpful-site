@@ -47,6 +47,30 @@ img {
 a {
   text-decoration: none;
 }
+/* =========================
+   ACCESSIBILITY IMPROVEMENTS
+   ========================= */
+
+/* Focus outline for keyboard navigation */
+a:focus,
+button:focus {
+  outline: 3px solid var(--brand-2);
+  outline-offset: 3px;
+}
+
+/* Improve readability */
+p {
+  max-width: 70ch;
+}
+
+/* Improve link clarity */
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
 
 /* =========================
    HEADER
@@ -121,7 +145,10 @@ nav a:hover,
 nav a.active {
   color: var(--brand-1);
   background: var(--soft-1);
+  box-shadow: 0 4px 10px rgba(91, 92, 230, 0.15);
+  font-weight: 700;
 }
+
 
 @media (min-width: 768px) {
   nav {
@@ -173,6 +200,25 @@ nav a.active {
 }
 
 .btn-primary {
+    position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::after {
+  left: 130%;
+}
   background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
   color: white;
   box-shadow: 0 6px 18px rgba(91, 92, 230, 0.28);

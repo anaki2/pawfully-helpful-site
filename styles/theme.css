@@ -1,23 +1,49 @@
 @custom-variant dark (&:is(.dark *));
 
+/* =================================
+   GLOBAL DESIGN TOKENS
+   ================================= */
+
 :root {
-  --background: hotpink;
+  /* Base colors */
+  --background: #f7f7ff;
   --foreground: #15162a;
 
+  /* Brand colors */
   --primary: #5b5ce6;
   --primary-foreground: #ffffff;
 
   --secondary: #ebe7ff;
   --secondary-foreground: #15162a;
 
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+
+  /* Muted / subtle */
   --muted: #f0f1ff;
   --muted-foreground: #5f6388;
 
-  --accent: #d8d2ff;
-  --accent-foreground: #15162a;
-
+  /* UI elements */
   --border: rgba(91, 92, 230, 0.18);
   --ring: rgba(91, 92, 230, 0.35);
 
   --input-background: #f3f4ff;
   --switch-background: #cfd2ff;
+
+  /* Radius */
+  --radius: 14px;
+}
+
+/* =================================
+   DARK MODE PREP
+   ================================= */
+
+.dark {
+  --background: #14152a;
+  --foreground: #ffffff;
+
+  --secondary: #1f2140;
+  --muted: #1b1d38;
+
+  --border: rgba(255, 255, 255, 0.1);
+}
