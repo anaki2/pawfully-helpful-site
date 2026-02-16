@@ -651,31 +651,24 @@ footer {
 
 .comparison-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
   background: white;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
 }
 
+.comparison-table th,
+.comparison-table td {
+  padding: 1.2rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+
 .comparison-table thead {
   background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
   color: white;
-}
-
-.comparison-table th,
-.comparison-table td {
-  padding: 1.2rem 1rem;
-  text-align: center;
-}
-
-.comparison-table th {
-  font-weight: 700;
-}
-
-.comparison-table tbody tr {
-  border-bottom: 1px solid var(--soft-2);
 }
 
 .comparison-table tbody tr:nth-child(even) {
