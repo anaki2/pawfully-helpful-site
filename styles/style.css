@@ -60,8 +60,21 @@ p {
 }
 
 nav a {
-  color: var(--brand-1);
-
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--brand-1),
+    var(--brand-2),
+    var(--brand-3)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+}
 
 nav a:hover {
   text-decoration: underline;
