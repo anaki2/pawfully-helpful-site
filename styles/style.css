@@ -600,6 +600,30 @@ footer {
   min-height: 140px;
   resize: vertical;
 }
+/* =========================
+   SUBMISSION PAGE
+   ========================= */
+
+.submission-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 4rem 1.5rem;
+
+}   
+
+.submission-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 22px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--soft-2);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+    
 
 /* =========================
    ANIMATIONS
