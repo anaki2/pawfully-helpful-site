@@ -48,7 +48,7 @@ a {
   text-decoration: none;
 }
 /* =========================
-   ACCESSIBILITY IMPROVEMENTS
+   ACCESSIBILITY AND READABILITY
    ========================= */
 
 /* Focus outline for keyboard navigation */
@@ -176,6 +176,29 @@ nav a.active {
 /* =========================
    BUTTONS 
    ========================= */
+
+btn-secondary:hover {
+  background: var(--soft-2);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  padding: 0.85rem 1.4rem;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 2px solid var(--brand-2);
+  background: transparent;
+  color: var(--brand-2);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--brand-2);
+  color: white;
+  transform: translateY(-2px);
+}
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -200,7 +223,7 @@ nav a.active {
 }
 
 .btn-primary {
-    position: relative;
+  position: relative;
   overflow: hidden;
 }
 
