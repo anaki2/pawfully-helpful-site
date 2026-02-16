@@ -684,19 +684,6 @@ footer {
    RESOURCES SECTION
    ========================= */
 
-.resources-image {
-  text-align: center;   
-  margin: 2rem auto;
-}
-
-.resources-image img {
-  width: 100px;       
-  height: 100px;     
-  object-fit: cover;
-  border-radius: 50%; 
-  box-shadow: var(--shadow-sm);
-}
-
 .resources-section img {
   width: 80px !important;
   height: 80px !important;
