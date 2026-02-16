@@ -532,7 +532,7 @@ footer {
 }
 /* Contact Form */
 .contact-form {
-  max-width: 500px;
+  max-width: 1000px;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
