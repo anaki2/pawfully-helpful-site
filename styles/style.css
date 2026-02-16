@@ -66,14 +66,13 @@ nav a {
   padding: 0.5rem 0.9rem;
   border-radius: 10px;
   transition: all 0.25s;
-}
 
-nav a:hover,
-nav a.active {
   background: rgba(255, 255, 255, 0.15);
-  color: white;
 }
 
+nav a:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
 
 /* =========================
    HEADER
