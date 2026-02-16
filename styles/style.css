@@ -71,13 +71,11 @@ nav a:hover {
    HEADER
    ========================= */
 header {
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: var(--shadow-sm);
-}
+  background: linear-gradient(
+    135deg,
+    var(--soft-1),
+    var(--soft-2)
+  );
 
 .header-content {
   max-width: 1200px;
