@@ -685,7 +685,7 @@ footer {
    ========================= */
 
    .resources-image {
-  max-width: 900px;
+  max-width: 50px;
   margin: 2rem auto 0;
   border-radius: 24px;
   overflow: hidden;
@@ -693,7 +693,7 @@ footer {
 }
 
 .resources-image img {
-  width: 100%;
+  width: 50%;
   height: 50px; 
   object-fit: cover;
   display: block;
