@@ -530,30 +530,75 @@ footer {
   font-weight: 600;
   color: #b8bce0;
 }
-/* Contact Form */
+
+/* =========================
+   CONTACT PAGE
+   ========================= */
+/* =========================
+   CONTACT FORM UPGRADE
+   ========================= */
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
 .contact-form {
-  max-width: 1000px;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form .form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--soft-2);
   width: 100%;
-  padding: 0.75rem;
-  border-radius: 10px;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #5f6388;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
   border: 1px solid var(--border);
   font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  transition: all 0.25s ease;
+  background: var(--soft-1);
 }
 
-.contact-form textarea {
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--brand-2);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+  background: white;
+}
+
+.input-group textarea {
   min-height: 140px;
   resize: vertical;
 }
