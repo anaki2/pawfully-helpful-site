@@ -86,8 +86,6 @@ header {
   box-shadow: var(--shadow-sm);
 }
 
-
-
 .header-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -98,24 +96,27 @@ header {
   gap: 1rem;
 }
 
-
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo-emoji img {
-    width: 65px;
-    height: auto;
+  width: 60px;
+  height: auto;
 }
 
 .logo-text h1 {
-    margin: 0;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0;
 }
 
 .logo-tagline {
-    margin: 0;
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6a6f92;
 }
 
 nav {
@@ -130,17 +131,14 @@ nav a {
   font-size: 0.95rem;
   padding: 0.5rem 0.9rem;
   border-radius: 10px;
-  transition: all 0.25s;
+  transition: all 0.25s ease;
 }
 
 nav a:hover,
 nav a.active {
   color: var(--brand-1);
   background: var(--soft-1);
-  box-shadow: 0 4px 10px rgba(91, 92, 230, 0.15);
-  font-weight: 700;
 }
-
 
 @media (min-width: 768px) {
   nav {
