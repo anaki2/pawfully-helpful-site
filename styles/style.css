@@ -538,6 +538,8 @@ footer {
 .contact-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   padding: 3rem 1.5rem;
 }
 
@@ -549,6 +551,7 @@ footer {
   border: 1px solid var(--soft-2);
   width: 100%;
   max-width: 550px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
