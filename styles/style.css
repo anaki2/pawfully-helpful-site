@@ -538,9 +538,8 @@ footer {
 .contact-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
 .contact-form {
@@ -550,11 +549,10 @@ footer {
   box-shadow: var(--shadow-md);
   border: 1px solid var(--soft-2);
   width: 100%;
-  max-width: 550px;
+  max-width: 500px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  text-align: center;
+  display: block;
 }
 
 .form-title {
