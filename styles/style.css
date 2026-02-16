@@ -102,8 +102,9 @@ header {
   transform: scale(1.02);
 }
 
-.logo-emoji {
-  font-size: 2rem;
+.logo-emoji img {
+    width: 60px;
+    height: auto;
 }
 
 .logo-text h1 {
