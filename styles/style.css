@@ -688,11 +688,6 @@ footer {
   transition: 0.2s ease;
 }
 
-/* =========================
-   RESOURCES SECTION
-   ========================= */
-
-
 .resources-section {
   padding: 5rem 1.5rem;
   background: var(--soft-1);
@@ -734,4 +729,27 @@ footer {
 .resource-card p {
   font-size: 0.95rem;
   color: #6a6f92;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background: white;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.comparison-table th {
+  background: #5b5ce6;
+  color: white;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #f2f2ff;
 }
