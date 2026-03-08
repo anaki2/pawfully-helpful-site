@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Set initial hidden state
   revealElements.forEach(el => {
     el.style.opacity = "0";
     el.style.transform = "translateY(20px)";
@@ -77,8 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-});
-
   const contactForm = document.querySelector(".contact-form");
 
   if (contactForm) {
@@ -98,3 +95,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
   }
+
+});
