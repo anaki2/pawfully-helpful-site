@@ -1,12 +1,5 @@
-// ================================
-// Pawfully Helpful - Main Script
-// ================================
-
 document.addEventListener("DOMContentLoaded", () => {
 
-  // --------------------------------
-  // Smooth Scrolling 
-  // --------------------------------
   const anchors = document.querySelectorAll('a[href^="#"]');
 
   if (anchors.length > 0) {
@@ -24,10 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
-  // --------------------------------
-  //Button Hover Glow Effect
-  // --------------------------------
   const primaryButtons = document.querySelectorAll(".btn-primary");
 
   primaryButtons.forEach(button => {
@@ -40,10 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
-  // --------------------------------
-  // Scroll Reveal Animation
-  // --------------------------------
   const revealElements = document.querySelectorAll(".category-card, .stat-card");
 
   const revealOnScroll = () => {
@@ -69,10 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 
-
-  // --------------------------------
-  // Active Nav Highlight on Scroll 
-  // --------------------------------
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll("nav a");
 
@@ -97,3 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+  const contactForm = document.querySelector(".contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name === "" || email === "" || message === "") {
+        alert("Please complete all fields before submitting.");
+        event.preventDefault();
+        return;
+      }
+
+      alert("Thank you for contacting Pawfully Helpful!");
+
+    });
+  }
